@@ -1,7 +1,7 @@
 require "pry"
 
 def dictionary
- replacements = {
+ dictionary_hash = {
     "hello" => "hi",
     "to" => "2",
     "two" => "2",
@@ -16,5 +16,11 @@ def dictionary
 end
 
 
-def word_substitutor(tweet)
+def word_substituter(tweet)
+  tweet.split(/ /)
+  
+  tweet.each do |word|
+    word == dictionary_hash.keys
+  end
+  #tweet.to_s
 end
