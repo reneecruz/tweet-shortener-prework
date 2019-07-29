@@ -1,7 +1,7 @@
 require "pry"
 
 def dictionary
- dictionary_hash = {
+ dictionary = {
     "hello" => "hi",
     "to" => "2",
     "two" => "2",
@@ -17,10 +17,13 @@ end
 
 
 def word_substituter(tweet)
-  tweet.split(/ /)
-  
-  tweet.each do |word|
-    word == dictionary_hash.keys
+    
+    tweet_array = tweet.split(" ")
+
+    tweet_array.map do |word|
+    dictionary.each do |key, value|
+    word = value if word.downcase == key
   end
-  #tweet.to_s
+  word
+end.join(" ")
 end
