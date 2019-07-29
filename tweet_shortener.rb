@@ -35,3 +35,11 @@ def bulk_tweet_shortener(tweets)
   end
 end
 
+def selective_tweet_shortener(tweet)
+  #binding.pry
+  if tweet[0..141] 
+    puts word_substituter(tweet)
+  elsif tweet[0..130]
+    puts tweet
+  end
+end
